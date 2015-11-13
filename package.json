@@ -1,6 +1,6 @@
 {
   "name": "google-maps-locales",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Google Maps locales",
   "main": "dist/index.js",
   "scripts": {
@@ -14,11 +14,11 @@
   "keywords": [
     "i18n",
     "google",
-	"maps",
-	"gmaps",
+    "maps",
+    "gmaps",
     "locales",
     "locale",
-	"language"
+    "language"
   ],
   "author": "Wix Restaurants",
   "license": "Apache",
