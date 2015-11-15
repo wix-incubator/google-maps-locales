@@ -20,7 +20,7 @@ export function bestGoogleMapsLocaleFor(locale) {
 	
 	// Is the language supported?
 	let language = locale.substr(0, 2)
-	let googleMapsLanguage = languagesToGoogleMapsLanguges[language]
+	let googleMapsLanguage = languagesToGoogleMapsLanguges[language] || language
 	if (_.includes(GoogleMaps.supportedLanguages, googleMapsLanguage)) {
 		return googleMapsLanguage
 	}

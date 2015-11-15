@@ -12,6 +12,7 @@ describe("GoogleMapsLocales", function() {
 
     it ("supports locales that are available only as Google Maps languages", function() {
 		GoogleMapsLocales.bestGoogleMapsLocaleFor("en_US").should.equal("en")
+		GoogleMapsLocales.bestGoogleMapsLocaleFor("it_IT").should.equal("it")
     })
 
     it ('supports locales that are available with non-standard IDs', function() {
