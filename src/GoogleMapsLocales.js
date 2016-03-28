@@ -1,30 +1,28 @@
-"use strict"
-
-import * as GoogleMaps from "../src/GoogleMaps.js"
+import { supportedLanguages as googleMapsSupportedLanguagues } from '../src/GoogleMaps'
 import _ from 'lodash'
 
-let languagesToGoogleMapsLanguges = {
-	"he": "iw",  // Hebrew
-	"tl": "fil", // Filipino
-	"nb": "no",  // Norwegian Bokmål
-	"nn": "no"   // Norwegian Nynorsk
+const languagesToGoogleMapsLanguges = {
+	'he': 'iw',  // Hebrew
+	'tl': 'fil', // Filipino
+	'nb': 'no',  // Norwegian Bokmål
+	'nn': 'no'   // Norwegian Nynorsk
 }
 
 export function bestGoogleMapsLocaleFor(locale) {
-	let googleMapsLocale = locale.replace("_", "-")
-	
+	const googleMapsLocale = locale.replace('_', '-')
+
 	// Is the fine-grained locale supported?
-	if (_.includes(GoogleMaps.supportedLanguages, googleMapsLocale)) {
+	if (_.includes(googleMapsSupportedLanguagues, googleMapsLocale)) {
 		return googleMapsLocale
 	}
-	
+
 	// Is the language supported?
-	let language = locale.substr(0, 2)
-	let googleMapsLanguage = languagesToGoogleMapsLanguges[language] || language
-	if (_.includes(GoogleMaps.supportedLanguages, googleMapsLanguage)) {
+	const language = locale.substr(0, 2)
+	const googleMapsLanguage = languagesToGoogleMapsLanguges[language] || language
+	if (_.includes(googleMapsSupportedLanguagues, googleMapsLanguage)) {
 		return googleMapsLanguage
 	}
-	
+
 	// Fallback to English
-	return "en"
+	return 'en'
 }
