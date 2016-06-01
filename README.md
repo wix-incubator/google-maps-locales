@@ -8,7 +8,7 @@ Google Maps locales.
 Install the library with `npm install google-maps-locales`
 
 ```javascript
-var GoogleMapsLocales = require('GoogleMapsLocales');
+var GoogleMapsLocales = require('google-maps-locales');
 
 GoogleMapsLocales.bestGoogleMapsLocaleFor("en_US"); //-> "en"
 GoogleMapsLocales.bestGoogleMapsLocaleFor("en_GB"); //-> "en-GB"
